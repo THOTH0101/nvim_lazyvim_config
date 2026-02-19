@@ -18,25 +18,19 @@ return {
       { "<leader>m", group = "Visual Multi" },
       {
         "<leader>ma",
-        function()
-          mc.matchAllAddCursors()
-        end,
-        desc = "Select All",
+        mc.matchAllAddCursors,
+        desc = "Select All Match",
         mode = "n",
       },
       {
         "<leader>mr",
-        function()
-          mc.restoreCursors()
-        end,
+        mc.restoreCursors,
         desc = "Restore Cursor",
         mode = "n",
       },
       {
         "<leader>mv",
-        function()
-          mc.splitCursors()
-        end,
+        mc.splitCursors,
         desc = "Visual Cursors",
         mode = "x",
       },
@@ -54,6 +48,22 @@ return {
           mc.matchAddCursor(-1)
         end,
         desc = "Add Cursor And To Previous",
+        mode = { "n", "x" },
+      },
+      {
+        "<leader>mk",
+        function()
+          mc.lineAddCursor(-1)
+        end,
+        desc = "Add Cursor Above Main Cursor",
+        mode = { "n", "x" },
+      },
+      {
+        "<leader>mj",
+        function()
+          mc.lineAddCursor(1)
+        end,
+        desc = "Add Cursor Below Main Cursor",
         mode = { "n", "x" },
       },
     })
