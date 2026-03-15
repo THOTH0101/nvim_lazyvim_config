@@ -1,4 +1,16 @@
 return {
   "mason-org/mason.nvim",
-  opts = { ensure_installed = { "prettier", "markdownlint-cli2", "markdown-toc" } },
+  opts = {
+    ensure_installed = {
+      "prettier",
+      "markdownlint-cli2",
+      "markdown-toc",
+      "goimports",
+      "gofumpt",
+      "gomodifytags",
+      "impl",
+      "golangci-lint",
+      "delve",
+    },
+  },
 }
